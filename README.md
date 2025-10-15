@@ -15,8 +15,7 @@ This fantastic app is designed to be your go-to tool for tracking your health jo
 - Daily Metabolic Rate: To figure out exactly how many calories your body needs each day.
 - Food Tracker: To log your meals and see how you're stacking up against your goals!
 ---
-Ready to get started? Let's go!
----
+
 # Tab 1: The BMI Calculator! 💪
 First up, let's calculate your Body Mass Index (BMI). It's a great way to get a snapshot of your body composition.
 
