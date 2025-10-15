@@ -41,23 +41,23 @@ How to use:
 - Click "Calculate My TDEE & Goals"! ✨
 
 What You'll See:
-- BMR: The number of calories your body burns at complete rest.
-- TDEE: This is the BIG one! It's the total number of calories your body burns in a day, including exercise. Remember this number for the next tab!
-- Calorie Goals: The app automatically gives you suggested daily calorie targets for maintaining, losing, or gaining weight. Awesome!
+- BMR: The number of Calories your body burns at complete rest.
+- TDEE: This is the BIG one! It's the total number of Calories your body burns in a day, including exercise. Remember this number for the next tab!
+- Calorie Goals: The app automatically gives you suggested daily Calorie targets for maintaining, losing, or gaining weight. Awesome!
 
 ---
 
 # Tab 3: The Food Tracker! 🥗
-Now it's time to put that TDEE number to work! Track what you eat to see if you're hitting your calorie goals.
+Now it's time to put that TDEE number to work! Track what you eat to see if you're hitting your Calorie goals.
 
 How to use:
 - IMPORTANT: You need to calculate your TDEE in the "Daily Metabolic Rate" tab first for this tab to work best!
 - Check Your TDEE: Your TDEE from the previous tab is displayed at the top for easy reference.
-- Log Your Calories: Every time you eat something, just type the number of calories into the "enter Calories" box.
+- Log Your Calories: Every time you eat something, just type the number of Calories into the "enter Calories" box.
 - Hit the "Log Food" Button!
 
 What You'll See:
-- Daily Calorie Total: See your total calories for the day add up with each entry.
+- Daily Calorie Total: See your total Calories for the day add up with each entry.
 - Calorie Difference: This shows you if you're over or under your TDEE for the day.
 - Calorie Intake Chart: This brilliant bar chart shows your daily calorie intake for the last 7 days. The yellow dashed line is your TDEE, so you can see at a glance how you're doing!
 
