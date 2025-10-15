@@ -285,7 +285,7 @@ with gd.Blocks(theme=gd.themes.Soft(), title="Health & Wellness Dashboard") as d
             with gd.Column():
                 gd.Markdown("#### Log a Food Item")
                 with gd.Row():
-                    manual_calories_input = gd.Textbox(label="Or enter Calories manually", placeholder="e.g., 250")
+                    manual_calories_input = gd.Textbox(label="enter Calories", placeholder="e.g., 250")
                 log_food_btn = gd.Button("Log Food")
 
             gd.Markdown("#### Your Daily Summary")
