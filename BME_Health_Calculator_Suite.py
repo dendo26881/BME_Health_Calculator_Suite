@@ -3,19 +3,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import datetime
 
-# Define food_database if it's not already defined
-if 'food_database' not in globals():
-    food_database = {
-        'Apple': 95,
-        'Banana': 105,
-        'Chicken Breast (grilled)': 165,
-        'Cooked Rice (1 cup)': 206,
-        'Scrambled Egg (large)': 90,
-        'Steak (100g)': 271,
-        'Spinach (1 cup)': 7,
-        'Bread (1 slice)': 80
-    }
-
 #######################################################################################
 
 def cal_bmi(height, weight, unit_height, unit_weight):
@@ -123,7 +110,7 @@ def cal_calorie_goals(tdee):
 ######################################################################################
 #####################################################################################
 
-def log_food(food_item, manual_calories, food_log_df, tdee):
+def log_food(manual_calories, food_log_df, tdee):
     import matplotlib.pyplot as plt
     import pandas as pd
     import datetime
@@ -136,10 +123,6 @@ def log_food(food_item, manual_calories, food_log_df, tdee):
     calories = 0
 
     try:
-        # Priority to food item from dropdown
-        if food_item and food_item in food_database:
-            calories = food_database[food_item]
-        elif manual_calories:
             calories = int(manual_calories)
     except Exception as e:
         # Handle invalid input (e.g. text in manual_calories)
@@ -152,7 +135,6 @@ def log_food(food_item, manual_calories, food_log_df, tdee):
     # Log the new food entry
     new_entry = pd.DataFrame([{
         'Date': today,
-        'Food': food_item if food_item else 'Manual Entry',
         'Calories': calories
     }])
     food_log_df = pd.concat([food_log_df, new_entry], ignore_index=True)
@@ -160,7 +142,7 @@ def log_food(food_item, manual_calories, food_log_df, tdee):
     # Today's total
     daily_entries_today = food_log_df[food_log_df['Date'] == today]
     current_daily_total = daily_entries_today['Calories'].sum()
-    calorie_difference = current_daily_total - tdee if tdee > 0 else 0
+    Calorie_difference = current_daily_total - tdee if tdee > 0 else 0
 
     # Get last 7 days of data
     seven_days_ago = datetime.date.today() - datetime.timedelta(days=6)
@@ -189,7 +171,7 @@ def log_food(food_item, manual_calories, food_log_df, tdee):
         plt.axhline(y=tdee, color='y', linestyle='--', label=f'TDEE ({tdee})')
         plt.legend()
 
-    return current_daily_total, plt.gcf(), food_log_df, calorie_difference
+    return current_daily_total, plt.gcf(), food_log_df, Calorie_difference
 
 
 
@@ -303,13 +285,7 @@ with gd.Blocks(theme=gd.themes.Soft(), title="Health & Wellness Dashboard") as d
             with gd.Column():
                 gd.Markdown("#### Log a Food Item")
                 with gd.Row():
-                    food_dropdown = gd.Dropdown(
-                        choices=list(food_database.keys()),
-                        label="Common Food Items",
-                        info="Select a common food or enter calories manually."
-
-                    )
-                    manual_calories_input = gd.Textbox(label="Or enter calories manually", placeholder="e.g., 250")
+                    manual_calories_input = gd.Textbox(label="Or enter Calories manually", placeholder="e.g., 250")
                 log_food_btn = gd.Button("Log Food")
 
             gd.Markdown("#### Your Daily Summary")
@@ -323,7 +299,7 @@ with gd.Blocks(theme=gd.themes.Soft(), title="Health & Wellness Dashboard") as d
 
             log_food_btn.click(
                 fn=log_food,
-                inputs=[food_dropdown, manual_calories_input, food_log_state, tdee_state],
+                inputs=[manual_calories_input, food_log_state, tdee_state],
                 outputs=[daily_total_calories_output, calorie_chart_output, food_log_state, calorie_difference_output]
             )
 
